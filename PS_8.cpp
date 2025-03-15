@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void print (int* ptr,size_t count);
-int* apply_all(int* arr1, size_t size1, int* arr2, size_t size2);
+void print (const int* ptr,size_t count);
+int* apply_all(const int* arr1, size_t size1,const int* arr2, size_t size2);
 
 
 int main() {
@@ -44,6 +44,7 @@ void print (int* ptr,size_t count)
 int* apply_all(int* arr1, size_t size1, int* arr2, size_t size2)
 {
 int* ptr {new int[size1 * size2]};
+/*
 int* temp {ptr};
 for (size_t i {0}; i < size1 ; i++)
 {
@@ -54,16 +55,15 @@ for (size_t i {0}; i < size1 ; i++)
     }
 }
 return temp;
-/*
+*/
 int  position  {0};
 for (size_t i {0}; i < size1 ; i++)
   {
     for (size_t j {0}; j < size2; j++)
       {     
-        ptr[position] = arr1[i] * arr2 [j];
-        position++;
+        ptr[position++] = arr1[i] * arr2 [j];
       }
   }
   return ptr;
-  */
+  
 }
