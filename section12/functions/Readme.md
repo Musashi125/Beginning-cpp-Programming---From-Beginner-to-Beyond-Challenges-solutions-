@@ -1,7 +1,8 @@
 My string class
 
-attributes 
+attributes :
     char* str;
+    size_t len;
 methods
     display
     get len
@@ -17,9 +18,16 @@ methods
 
 functions 
 
-+ -
-== !=
++ 
+-
+== 
+!=
 ++
 --
-+ +=
-* *=
++=
+* 
+*=
+>
+<
+<<
+<<
